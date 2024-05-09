@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Calculator</title>
+</head>
+<body>
+    <div id="main" style="background-color: aqua;box-shadow: 2px 2px 4px;">
+        <h1 id="ip1">Let's see some<br>Factorial Numbers</h1>
+        <h2 id="ip2">ENTER A NUMBER</h2>
+        <input id="ip3" placeholder="Enter Number">
+        <h2 id="ip4">Result</h2>
+        <input id="ip5" readonly><br><br>
+        <button id="ip6">SUBMIT</button>
+    </div>
+    <script>
+        let getmain = document.getElementById("main");
+        getmain.style.border = "1px solid";
+        getmain.style.width = "350px";
+        getmain.style.height = "350px";
+        getmain.style.textAlign = "center";
+        getmain.style.marginLeft = "600px";
+        getmain.style.marginTop = "150px";
+        getmain.style.borderRadius = "100px";
+
+        let getip1 = document.getElementById("ip1");
+        getip1.style.fontFamily = "monospace";
+
+        let getip2 = document.getElementById("ip2");
+        getip2.style.fontSize = "20px";
+        getip2.style.color = "blue";
+
+        let getip3 = document.getElementById("ip3");
+        getip3.style.borderRadius = "10px";
+        getip3.style.fontSize = "15px";
+
+        let getip4 = document.getElementById("ip4");
+        getip4.style.marginTop = "30px";
+
+        let getip5 = document.getElementById("ip5");
+        getip5.style.marginTop = "-20px";
+        getip5.style.fontSize = "15px";
+        getip5.style.borderRadius = "10px";
+
+        let getip6 = document.getElementById("ip6");
+        getip6.style.backgroundColor = "green";
+        getip6.style.fontSize = "15px";
+
+        let ip5 = document.getElementById("ip5");
+        let ip3 = document.getElementById("ip3");
+        let ip6 = document.getElementById("ip6");
+
+        ip6.addEventListener("click", () => {
+            let num = parseInt(ip3.value);
+            let factorial = 1;
+            for (let i = 2; i <= num; i++) {
+                factorial *= i;
+            }
+            ip5.value = factorial;
+        });
+    </script>
+</body>
+</html>
+
